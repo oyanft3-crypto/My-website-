@@ -1,399 +1,549 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Football News | Ahmad Football Hub</title>
+<title>Football News | Ahmad Football Hub</title>
 
-    <meta name="description"
-        content="Read football news, analysis, transfer discussions, match previews and player stories on Ahmad Football Hub.">
+<meta name="description" content="Read football news, transfer updates, match analysis, player stories and football opinions on Ahmad Football Hub.">
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<meta name="keywords" content="football news, football transfers, Arsenal news, Premier League, football analysis, player news">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f4f7;
-            color: #222;
-            line-height: 1.7;
-        }
+<style>
 
-        header {
-            background: #111827;
-            color: white;
-            padding: 25px 15px;
-            text-align: center;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        header h1 {
-            font-size: 30px;
-            margin-bottom: 8px;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    color: #222;
+    line-height: 1.7;
+}
 
-        header p {
-            color: #d1d5db;
-            font-size: 16px;
-        }
+/* HEADER */
 
-        nav {
-            background: #dc2626;
-            padding: 12px 8px;
-            text-align: center;
-        }
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 7px;
-            font-weight: bold;
-            display: inline-block;
-            padding: 5px 0;
-        }
+header h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+header p {
+    color: #d1d5db;
+    font-size: 16px;
+}
 
-        .container {
-            max-width: 950px;
-            margin: 25px auto;
-            padding: 0 15px;
-        }
+/* NAVIGATION */
 
-        .page-title {
-            background: white;
-            padding: 25px 20px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            text-align: center;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-        }
+nav {
+    background: #dc2626;
+    padding: 12px 10px;
+    text-align: center;
+}
 
-        .page-title h2 {
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 7px;
+    display: inline-block;
+    padding: 5px;
+}
 
-        .page-title p {
-            color: #666;
-        }
+nav a:hover {
+    text-decoration: underline;
+}
 
-        .article {
-            background: white;
-            margin-bottom: 25px;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-        }
+/* MAIN */
 
-        .article h2 {
-            color: #111827;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+.container {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
 
-        .date {
-            color: #777;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
+/* PAGE INTRO */
 
-        .article p {
-            margin-bottom: 15px;
-            color: #444;
-        }
+.page-intro {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
 
-        .article h3 {
-            margin: 18px 0 8px;
-            color: #dc2626;
-        }
+.page-intro h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
 
-        .read-more {
-            display: inline-block;
-            background: #dc2626;
-            color: white;
-            padding: 10px 18px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 5px;
-        }
+.page-intro p {
+    color: #555;
+}
 
-        .read-more:hover {
-            background: #b91c1c;
-        }
+/* CATEGORY BAR */
 
-        footer {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 25px 15px;
-            margin-top: 35px;
-        }
+.categories {
+    margin: 20px 0;
+}
 
-        footer p {
-            margin: 8px 0;
-            color: #d1d5db;
-        }
+.categories span {
+    display: inline-block;
+    background: #111827;
+    color: white;
+    padding: 7px 12px;
+    margin: 4px;
+    border-radius: 20px;
+    font-size: 14px;
+}
 
-        footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 6px;
-        }
+/* NEWS ARTICLE */
 
-        footer a:hover {
-            text-decoration: underline;
-        }
+.article {
+    background: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 26px;
-            }
+.article h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+    color: #111827;
+}
 
-            nav a {
-                margin: 3px 5px;
-                font-size: 14px;
-            }
+.article h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
 
-            .page-title h2 {
-                font-size: 25px;
-            }
+.article p {
+    margin-bottom: 12px;
+    color: #444;
+}
 
-            .article {
-                padding: 20px;
-            }
+.article-meta {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
 
-            .article h2 {
-                font-size: 21px;
-            }
-        }
-    </style>
+.tag {
+    display: inline-block;
+    background: #dc2626;
+    color: white;
+    padding: 4px 9px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* READ MORE */
+
+.read-more {
+    display: inline-block;
+    background: #dc2626;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.read-more:hover {
+    background: #b91c1c;
+}
+
+/* EDITORIAL NOTE */
+
+.editorial {
+    background: #fff7ed;
+    border-left: 5px solid #f97316;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #111827;
+    color: #d1d5db;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 7px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav a {
+        margin: 3px 5px;
+    }
+
+    .page-intro h2 {
+        font-size: 25px;
+    }
+
+    .article {
+        padding: 20px;
+    }
+
+    .article h2 {
+        font-size: 21px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>⚽ Ahmad Football Hub</h1>
-        <p>Football news, analysis and updates</p>
-    </header>
+<header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="news.html">News</a>
-        <a href="arsenal.html">Arsenal</a>
-        <a href="players.html">Players</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<h1>⚽ Ahmad Football Hub</h1>
 
-    <main class="container">
+<p>Football news, analysis and updates</p>
 
-        <section class="page-title">
-            <h2>📰 Latest Football News</h2>
-            <p>
-                Football stories, analysis, transfer discussions,
-                match previews and player updates.
-            </p>
-        </section>
-
-        <article class="article">
-            <h2>Why Midfield Control Is So Important in Modern Football</h2>
-
-            <div class="date">Football Analysis</div>
-
-            <p>
-                Midfield is one of the most important areas of a football
-                pitch. A team that controls the midfield can often control
-                the speed and direction of a match.
-            </p>
-
-            <p>
-                Midfielders are expected to do much more than simply pass
-                the ball. They may help their team build attacks, protect
-                the defence, recover possession and create opportunities
-                for attackers.
-            </p>
-
-            <h3>What makes a good midfielder?</h3>
-
-            <p>
-                A strong midfielder usually needs good awareness, passing
-                ability, decision-making and the ability to understand
-                space. Different midfielders may have different roles,
-                but teamwork is important for all of them.
-            </p>
-
-            <p>
-                This is one reason why midfield battles are often among
-                the most interesting parts of a football match.
-            </p>
-
-            <a href="contact.html" class="read-more">Contact Us</a>
-        </article>
+</header>
 
 
-        <article class="article">
-            <h2>What Makes a Football Team Successful?</h2>
+<nav>
 
-            <div class="date">Football Analysis</div>
+<a href="index.html">Home</a>
+<a href="news.html">News</a>
+<a href="arsenal.html">Arsenal</a>
+<a href="players.html">Players</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy</a>
+<a href="disclaimer.html">Disclaimer</a>
 
-            <p>
-                Winning football matches is rarely about one player alone.
-                Successful teams normally combine good coaching, teamwork,
-                discipline, quality players and consistent preparation.
-            </p>
-
-            <p>
-                A team also needs to adapt. Opponents can use different
-                formations and strategies, so coaches often have to make
-                tactical decisions during matches.
-            </p>
-
-            <h3>The importance of teamwork</h3>
-
-            <p>
-                Individual talent can make a difference, but coordinated
-                movement and communication allow players to work together
-                more effectively.
-            </p>
-
-            <p>
-                For this reason, football remains a team sport where
-                organisation can be just as important as individual skill.
-            </p>
-        </article>
+</nav>
 
 
-        <article class="article">
-            <h2>How Young Footballers Can Improve Their Game</h2>
-
-            <div class="date">Player Development</div>
-
-            <p>
-                Developing as a footballer takes patience and regular
-                practice. Young players can improve by working on basic
-                skills such as passing, first touch, ball control and
-                decision-making.
-            </p>
-
-            <p>
-                Watching football can also help players understand movement,
-                positioning and tactical decisions. However, practical
-                training is important because skills improve through
-                consistent practice.
-            </p>
-
-            <h3>Learning from mistakes</h3>
-
-            <p>
-                Mistakes are a normal part of development. Instead of
-                becoming discouraged, players can study what went wrong
-                and use the experience to improve their next performance.
-            </p>
-        </article>
+<main class="container">
 
 
-        <article class="article">
-            <h2>Why Football Transfers Attract So Much Attention</h2>
+<section class="page-intro">
 
-            <div class="date">Transfer Discussion</div>
+<h2>📰 Latest Football News</h2>
 
-            <p>
-                Player transfers are one of the most discussed parts of
-                football. Supporters are interested in which players their
-                clubs could sign and how new arrivals might change the team.
-            </p>
+<p>
+Welcome to the news section of Ahmad Football Hub. 
+We cover football stories, transfer developments, match analysis,
+player performances and major talking points from the world of football.
+</p>
 
-            <p>
-                A transfer involves more than choosing a talented player.
-                Clubs also have to consider the player's position, style
-                of play, age, contract situation and how well the player
-                could fit into the team's plans.
-            </p>
+<div class="categories">
 
-            <h3>Transfers and team building</h3>
+<span>⚽ Football</span>
+<span>🔴 Premier League</span>
+<span>🔄 Transfers</span>
+<span>👤 Players</span>
+<span>📊 Analysis</span>
 
-            <p>
-                Good recruitment can help a club strengthen weak areas of
-                its squad. However, a successful signing still needs time
-                to adapt to a new team, league and tactical system.
-            </p>
-        </article>
+</div>
+
+</section>
 
 
-        <article class="article">
-            <h2>What to Watch When Analysing a Football Match</h2>
+<!-- ARTICLE 1 -->
 
-            <div class="date">Match Analysis</div>
+<article class="article">
 
-            <p>
-                Watching a football match can be more interesting when you
-                look beyond goals and assists. The way teams create space,
-                defend together and move the ball can reveal a lot about
-                their tactics.
-            </p>
+<span class="tag">FOOTBALL ANALYSIS</span>
 
-            <p>
-                One useful area to watch is how a team reacts after losing
-                possession. Some teams immediately try to win the ball back,
-                while others retreat and reorganise their defence.
-            </p>
+<h2>
+Why squad depth can decide a long Premier League season
+</h2>
 
-            <p>
-                Looking at these details can help supporters understand why
-                certain teams perform well against particular opponents.
-            </p>
-        </article>
+<p class="article-meta">
+Published August 2026 • Ahmad Football Hub Editorial
+</p>
+
+<p>
+A Premier League season is not decided by one match alone. 
+Over a long campaign, injuries, suspensions, fixture congestion 
+and changes in form can have a major influence on a team's performance.
+</p>
+
+<p>
+This is why squad depth has become an important part of modern football.
+Teams competing in several competitions need reliable options across 
+different positions rather than depending on only a small group of players.
+</p>
+
+<h3>What makes squad depth important?</h3>
+
+<p>
+A strong squad allows a manager to rotate players while maintaining 
+the team's style and competitive level. It can also give younger players 
+opportunities to develop when senior players are unavailable.
+</p>
+
+<p>
+For supporters, the most interesting question is often whether a club's 
+backup options can perform when the pressure increases during the season.
+</p>
+
+<div class="editorial">
+
+<strong>Ahmad Football Hub View:</strong>
+
+<p>
+Squad depth may not always receive the same attention as big-name signings,
+but it can become one of the biggest differences between competing for 
+trophies and struggling during a difficult period.
+</p>
+
+</div>
+
+</article>
 
 
-        <article class="article">
-            <h2>Football Is More Than Just Goals</h2>
+<!-- ARTICLE 2 -->
 
-            <div class="date">Football Opinion</div>
+<article class="article">
 
-            <p>
-                Goals are the most obvious part of football, but many other
-                moments influence the outcome of a match. Defensive
-                positioning, goalkeeper saves, passing, pressing and
-                movement can all make a difference.
-            </p>
+<span class="tag">TRANSFER TALK</span>
 
-            <p>
-                This is why football discussions can involve many different
-                opinions. Two supporters may watch the same match and notice
-                completely different aspects of the game.
-            </p>
+<h2>
+What supporters should look for when judging a transfer
+</h2>
 
-            <p>
-                At Ahmad Football Hub, our goal is to discuss these different
-                parts of football and provide useful content for football
-                supporters.
-            </p>
-        </article>
+<p class="article-meta">
+Published August 2026 • Ahmad Football Hub Editorial
+</p>
 
-    </main>
+<p>
+Transfer stories can dominate football discussions, especially during 
+the summer window. However, a player's reputation alone does not always 
+tell the full story about whether a signing will succeed.
+</p>
 
-    <footer>
+<p>
+Supporters should consider several factors, including the player's 
+position, tactical role, previous level of competition, age, consistency 
+and how well their strengths fit the team's style.
+</p>
 
-        <p>© 2026 Ahmad Football Hub. All rights reserved.</p>
+<h3>More than just statistics</h3>
 
-        <p>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="disclaimer.html">Disclaimer</a>
-        </p>
+<p>
+Goals and assists can be useful when evaluating attacking players, 
+but footballers contribute in different ways. Defensive work, passing, 
+movement, pressing, decision-making and positioning can also be important.
+</p>
 
-    </footer>
+<p>
+The best transfer decisions usually combine statistics with tactical 
+analysis and a clear understanding of what the team actually needs.
+</p>
+
+</article>
+
+
+<!-- ARTICLE 3 -->
+
+<article class="article">
+
+<span class="tag">PLAYER WATCH</span>
+
+<h2>
+How player development can change a club's future
+</h2>
+
+<p class="article-meta">
+Published August 2026 • Ahmad Football Hub Editorial
+</p>
+
+<p>
+Developing young footballers can provide clubs with both sporting and 
+financial benefits. Academy players who establish themselves in the 
+first team can become important members of the squad for many years.
+</p>
+
+<p>
+Development is rarely immediate. Young players often need time to adapt 
+to senior football, improve their decision-making and become comfortable 
+with the physical and tactical demands of professional matches.
+</p>
+
+<p>
+For this reason, patience and good coaching can be just as important 
+as natural ability.
+</p>
+
+</article>
+
+
+<!-- ARTICLE 4 -->
+
+<article class="article">
+
+<span class="tag">MATCH ANALYSIS</span>
+
+<h2>
+The importance of tactics before and during a football match
+</h2>
+
+<p class="article-meta">
+Published August 2026 • Ahmad Football Hub Editorial
+</p>
+
+<p>
+Football matches can change quickly. A team may begin with one tactical 
+approach and then make adjustments depending on the opponent's formation, 
+pressing strategy and attacking threats.
+</p>
+
+<p>
+Managers therefore have to make decisions before kick-off and sometimes 
+change their plans during the match.
+</p>
+
+<h3>Small changes can make a difference</h3>
+
+<p>
+Moving a midfielder into a different position, changing the pressing 
+approach or introducing a different type of attacker can alter the way 
+a match develops.
+</p>
+
+<p>
+This is one of the reasons football remains difficult to predict even 
+when one team appears stronger on paper.
+</p>
+
+</article>
+
+
+<!-- ARTICLE 5 -->
+
+<article class="article">
+
+<span class="tag">PREMIER LEAGUE</span>
+
+<h2>
+What makes the Premier League so competitive?
+</h2>
+
+<p class="article-meta">
+Published August 2026 • Ahmad Football Hub Editorial
+</p>
+
+<p>
+The Premier League is known for its intensity, quality and competitive 
+matches. Clubs have different playing styles, financial resources, 
+managers and squad-building strategies.
+</p>
+
+<p>
+That variety means a team can face a completely different challenge 
+from one weekend to the next.
+</p>
+
+<p>
+The quality of coaching, recruitment, player development and tactical 
+preparation can all influence where a club finishes at the end of the 
+season.
+</p>
+
+</article>
+
+
+<!-- ARTICLE 6 -->
+
+<article class="article">
+
+<span class="tag">EDITORIAL</span>
+
+<h2>
+Welcome to the new Ahmad Football Hub
+</h2>
+
+<p class="article-meta">
+Published August 2026 • Ahmad Football Hub
+</p>
+
+<p>
+Ahmad Football Hub was created for football supporters who enjoy keeping 
+up with football stories, players, transfers and tactical discussions.
+</p>
+
+<p>
+Our aim is to provide easy-to-understand football content while giving 
+readers a place to follow important stories and discuss the game.
+</p>
+
+<p>
+We will continue improving the website and adding more original football 
+articles, analysis and player-focused content.
+</p>
+
+<div class="editorial">
+
+<strong>Our promise to readers:</strong>
+
+<p>
+We aim to provide useful, original and clearly presented football content.
+When a story involves opinions or analysis, we will make that clear.
+</p>
+
+</div>
+
+</article>
+
+
+</main>
+
+
+<footer>
+
+<p>
+© 2026 Ahmad Football Hub. All rights reserved.
+</p>
+
+<p>
+
+<a href="index.html">Home</a> |
+<a href="about.html">About</a> |
+<a href="contact.html">Contact</a> |
+<a href="privacy.html">Privacy Policy</a> |
+<a href="disclaimer.html">Disclaimer</a>
+
+</p>
+
+</footer>
+
 
 </body>
-
 </html>
